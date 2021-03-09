@@ -7,7 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>Gatto : {{ $gatto }}</h2>
-    <h2>Topo : {{ $topo }}</h2>
+    <ul style="list-style:none">
+        @foreach($cartoni as $cartone)
+        <li>{{$cartone['gatto']}}</li>
+        <li>{{$cartone['topo']}}</li>
+        <li><img src="{{ $cartone['img'] }}" alt="" style="width:300px"></li>
+        @endforeach
+    </ul>
 </body>
 </html>
