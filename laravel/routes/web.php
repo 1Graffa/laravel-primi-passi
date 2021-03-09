@@ -14,5 +14,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $array = [
+        'gatto' => 'Tom',
+        'topo'  => 'Jerry'
+    ];
+    return view('primi-passi',$array);
+});
+Route::get('/prova', function () {
+    return view('prova');
 });
